@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Password Strength Checker</title>
+   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body align="center">
+    <div class="header">
+        <h2>Password Strength Checker</h2>
+        <p>Check your password's strength and know how secure it is.</p>
+
+        <form method="POST">
+        <div class="password-box">
+    <input type="password" id="password" name="password" placeholder="Enter password">
+    <span class="eye" id="eye" onclick="togglePassword()">👁️</span>
+</div>
+
+
+            <button type="submit">Check Strength</button>
+        </form>
+       <p id="result" class="{{ result }}">{{ result }}</p>
+       <ul>
+    <li>Minimum 8 characters: {{ '✔' if rules.length else '❌' }}</li>
+    <li>Uppercase letter: {{ '✔' if rules.upper else '❌' }}</li>
+    <li>Lowercase letter: {{ '✔' if rules.lower else '❌' }}</li>
+    <li>Digit: {{ '✔' if rules.digit else '❌' }}</li>
+    <li>Special character: {{ '✔' if rules.special else '❌' }}</li>
+</ul>
+
+    </div>
+    <script>
+        function togglePassword() {
+            var passwordField = document.getElementById("password");
+            var eyeIcon = document.getElementById("eye");
+            if (passwordField.type === "password") {
+                passwordField.type = "text";
+                eyeIcon.textContent = "🙈";
+            } else {
+                passwordField.type = "password";
+                eyeIcon.textContent = "👁️";
+            }
+        }
+    </script>
+</body>
+</html>

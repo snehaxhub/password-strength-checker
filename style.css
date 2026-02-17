@@ -1,0 +1,90 @@
+body{
+    font-family: 'Arial, sans-serif'; 
+    margin: 10px;
+    background-color: rgba(48, 48, 127, 0.271);
+    color: white;
+}
+div.header{
+    max-width: 300px;
+    max-height: 500px;
+    margin: 190px auto;
+    padding: 50px;
+    border: 1px solid rgb(16, 1, 1);
+    background-color: rgba(155, 103, 206, 0.24);
+    color: rgb(19, 2, 39);
+    border-radius: 10px;
+    box-shadow: 4px 4px 10px rgba(192, 184, 184, 0.136);
+}
+h2{
+    color: rgb(1, 4, 36);
+    font-size: 25px;
+    font-family: 'Verdana, sans-serif';
+    margin-bottom: 5px;
+}
+p{
+    font-size: 10px;
+    line-height: 1;
+    font-family: 'Tahoma';
+    color: rgb(15, 1, 31);
+}
+button{
+    background-color: rgb(116, 98, 134);
+    text-align: center;
+    border-radius: 2px;
+    padding: 5px;
+    font-family: 'Courier New', monospace;
+    color: rgb(28, 2, 35);
+    box-shadow: 4px 4px 10px rgba(127, 54, 18, 0.188);
+    margin: 3%;
+}
+button:hover{
+    background-color: rgb(156, 130, 170);
+    cursor: pointer;
+}
+input[type="password"]{
+    padding: 2px;
+    border-radius: 10px;
+    border: 1px solid rgb(41, 0, 72);
+    margin-top: 3%;
+    margin-left: 5%;
+    background-color: rgba(250, 253, 255, 0.512);
+    text-align: center;
+}
+#result {
+    margin-top: 15px;
+    font-weight: bold;
+}
+.Weak {
+    color: red;
+    font-weight: bold;
+    font-size: large;
+}
+
+.Medium {
+    color: orange;
+    font-weight: bold;
+    font-size: large;
+}
+
+.Strong {
+    color: green;
+    font-weight: bold;
+    font-size: large;
+}
+.password-box {
+    position: relative;
+    display: inline-block;
+}
+
+.password-box input {
+    padding-right: 35px;
+}
+
+.eye {
+    position: absolute;
+    right: 5px;
+    top: 6px;
+    cursor: pointer;
+}
+
+
